@@ -3,14 +3,17 @@ using namespace std;
 
 void solve()
 {
-    string a, b, c, d;
+    string a, b;
+    int c, d;
     cin >> a;
-    for (int i = 0; i < a.size(); i++)
+    c = a.size();
+    for (int i = 0; i < c; i++)
     {
         a[i] = tolower(a[i]);
     }
     cin >> b;
-    for (int i = 0; i < b.size(); i++)
+    d = b.size();
+    for (int i = 0; i < d; i++)
     {
         b[i] = tolower(b[i]);
     }
