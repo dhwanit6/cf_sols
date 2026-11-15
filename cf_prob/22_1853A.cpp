@@ -3,23 +3,23 @@ using namespace std;
 
 void solve()
 {
-    int a;
+    int a, m = INT_MAX;
     cin >> a;
     vector<int> v(a);
     for (int i = 0; i < a; i++)
     {
         cin >> v[i];
     }
-    vector<int> s = v;
-    sort(v.begin(), v.end());
-    if (v != s)
+    for (int i = 0; i < a - 1; i++)
     {
-        cout << 0 << "\n";
+        if (v[i] > v[i + 1])
+        {
+            cout << 0 << "\n";
+            return;
+        }
+        m = min((v[i + 1] - v[i]), m);
     }
-    else
-    {
-        cout << ((v[a - 1] - v[a - 2]) / 2) + 1 << "\n";
-    }
+    cout << (m / 2) + 1 << "\n";
 }
 
 int main()
