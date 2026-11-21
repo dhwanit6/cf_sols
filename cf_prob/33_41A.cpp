@@ -8,6 +8,11 @@ void solve()
     cin >> b;
     int m = a.size();
     int n = b.size();
+    if (m != n)
+    {
+        cout << "NO" << "\n";
+        return;
+    }
     for (int i = 0; i < m; i++)
     {
         if (a[i] == b[n - 1])
@@ -17,6 +22,7 @@ void solve()
         else
         {
             cout << "NO" << "\n";
+            break;
         }
     }
     if (n == 0)
